@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.primary_button {
+    color: #fdfdfd;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 35px;
+    background:linear-gradient(45deg, #007bff, #000000);
+    cursor: pointer;
+}
+
+.primary_button:hover {
+    background:linear-gradient(260deg, #000000, #007bff);
+}
