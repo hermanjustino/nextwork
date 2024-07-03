@@ -1,13 +1,31 @@
-import logo from "../images/nexworkLogo.png"
+import whiteLogo from "../images/nexworkLogo.png"
+import logoColour from "../images/nextworkLogoColour.png"
 
-const Nav = () => {
+const Nav = ({ authToken, minimal, setShowModal, showModal, setIsSignUp }) => {
+  const handleClick = () => {
+    setShowModal(true);
+    setIsSignUp(false);
+  };
+
   return (
-    <div>
+    <nav>
       <div className="logo-container">
-        <img src={logo} className="logo" alt="logo" />
+        <img
+          className="logo"
+          src={minimal ? logoColour : whiteLogo}
+          alt="logo"
+        />
       </div>
-    </div>
+      {!authToken && !minimal && (
+        <button
+          className="nav-button"
+          onClick={handleClick}
+          disabled={showModal}
+        >
+          Log in
+        </button>
+      )}
+    </nav>
   );
-}
-
+};
 export default Nav;
