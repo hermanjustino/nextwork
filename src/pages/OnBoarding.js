@@ -12,9 +12,8 @@ const OnBoarding = () => {
         dob_day: "",
         dob_month: "",
         dob_year: "",
-        show_gender: false,
-        gender_identity: "man",
-        gender_interest: "woman",
+        employment_identity: "employer",
+        employment_interest: "employee",
         url: "",
         about: "",
         matches: []
@@ -106,87 +105,77 @@ const OnBoarding = () => {
                             />
                         </div>
 
-                        <label>Gender</label>
+                        <label>Employment Identity</label>
                         <div className="multiple-input-container">
                             <input
-                                id="man-gender-identity"
+                                id="employer-gender-identity"
                                 type="radio"
-                                name="gender_identity"
-                                value="man"
+                                name="employment_identity"
+                                value="employer"
                                 onChange={handleChange}
-                                checked={formData.gender_identity === "man"}
+                                checked={formData.employment_identity === "employer"}
                             />
-                            <label htmlFor="man-gender-identity">Man</label>
+                            <label htmlFor="employer-gender-identity">Employer</label>
                             <input
-                                id="woman-gender-identity"
+                                id="employee-gender-identity"
                                 type="radio"
-                                name="gender_identity"
-                                value="woman"
+                                name="employment_identity"
+                                value="employee"
                                 onChange={handleChange}
-                                checked={formData.gender_identity === "woman"}
+                                checked={formData.employment_identity === "employee"}
                             />
-                            <label htmlFor="woman-gender-identity">Woman</label>
+                            <label htmlFor="employee-gender-identity">Employee</label>
                             <input
                                 id="more-gender-identity"
                                 type="radio"
-                                name="gender_identity"
+                                name="employment_identity"
                                 value="more"
                                 onChange={handleChange}
-                                checked={formData.gender_identity === "more"}
+                                checked={formData.employment_identity === "more"}
                             />
                             <label htmlFor="more-gender-identity">More</label>
                         </div>
-
-                        <label htmlFor="show-gender">Show Gender on my Profile</label>
-
-                        <input
-                            id="show-gender"
-                            type="checkbox"
-                            name="show_gender"
-                            onChange={handleChange}
-                            checked={formData.show_gender}
-                        />
 
                         <label>Show Me</label>
 
                         <div className="multiple-input-container">
                             <input
-                                id="man-gender-interest"
+                                id="employer-gender-interest"
                                 type="radio"
-                                name="gender_interest"
-                                value="man"
+                                name="employment_interest"
+                                value="employer"
                                 onChange={handleChange}
-                                checked={formData.gender_interest === "man"}
+                                checked={formData.employment_interest === "employer"}
                             />
-                            <label htmlFor="man-gender-interest">Man</label>
+                            <label htmlFor="employer-gender-interest">Employers</label>
                             <input
-                                id="woman-gender-interest"
+                                id="employee-gender-interest"
                                 type="radio"
-                                name="gender_interest"
-                                value="woman"
+                                name="employment_interest"
+                                value="employee"
                                 onChange={handleChange}
-                                checked={formData.gender_interest === "woman"}
+                                checked={formData.employment_interest === "employee"}
                             />
-                            <label htmlFor="woman-gender-interest">Woman</label>
+                            <label htmlFor="employee-gender-interest">Employees</label>
                             <input
-                                id="everyone-gender-interest"
+                                id="everyone-employment-interest"
                                 type="radio"
-                                name="gender_interest"
+                                name="employment_interest"
                                 value="everyone"
                                 onChange={handleChange}
-                                checked={formData.gender_interest === "everyone"}
+                                checked={formData.employment_interest === "everyone"}
                             />
-                            <label htmlFor="everyone-gender-interest">Everyone</label>
+                            <label htmlFor="everyone-employment-interest">Both</label>
 
                         </div>
 
-                        <label htmlFor="about">About me</label>
+                        <label htmlFor="about">Employment Profile</label>
                         <input
                             id="about"
                             type="text"
                             name="about"
                             required={true}
-                            placeholder="I like long walks..."
+                            placeholder="About me..."
                             value={formData.about}
                             onChange={handleChange}
                         />
