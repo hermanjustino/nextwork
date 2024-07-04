@@ -14,7 +14,7 @@ body {
 }
 
 .primary-title {
-    font-size: 85px;
+    font-size: 80px;
     color: rgb(255, 255, 255);
 }
 
@@ -59,7 +59,7 @@ nav {
 
 nav .nav-button {
     color: #007bff;
-    background-color: antiquewhite;
+    background-color: rgb(250, 247, 242);
     font-size: 20px;
     padding: 10px 20px;
     border-radius: 10px;
