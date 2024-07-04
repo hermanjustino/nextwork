@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { ImageBackground, Text, View } from 'react-native-web'
 import TinderCard from 'react-tinder-card'
+import ChatContainer from '../components/ChatContainer'
 
 const styles = {
   container: {
@@ -90,6 +91,7 @@ const Dashboard = () => {
 
   return (
     <View style={styles.container}>
+    <ChatContainer/>
       <Text style={styles.header}>Nextwork Employer Matcher</Text>
       <View style={styles.cardContainer}>
         {characters.map((character) =>
